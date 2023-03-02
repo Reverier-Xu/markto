@@ -50,7 +50,7 @@ export class MarkTo {
             }
             if (options?.prism) {
                 const rehypePrismPlus = await import ('rehype-prism-plus/common')
-                this.processor?.use(rehypePrismPlus.default)
+                this.processor?.use(rehypePrismPlus.default, {ignoreMissing: true})
             }
             if (options?.sanitize) {
                 const rehypeSanitize = await import('rehype-sanitize')
