@@ -2,17 +2,39 @@
   "name": "markto",
   "version": "1.0.0",
   "description": "A simple wrapper project that turns markdown to various output format",
-  "main": "index.ts",
+  "type": "module",
+  "repository": "Reverier-Xu/markto",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist/*"],
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "markdown"
   ],
-  "author": "Reverier-Xu",
+  "author": {
+    "name": "Reverier-Xu",
+    "email": "reverier.xu@woooo.tech",
+    "url": "https://blog.woooo.tech/"
+  },
   "license": "MIT",
   "devDependencies": {
+    "@types/mdast": "^3.0.10",
     "@types/node": "^18.14.3",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "rehype-katex": "^6.0.2",
+    "rehype-prism-plus": "^1.5.1",
+    "rehype-sanitize": "^5.0.1",
+    "rehype-stringify": "^9.0.3",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.2"
   }
 }
